@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Список групп
+{% endblock %}
+
+
+{% block content %}
+{% include "core/numerate.html" with values=groups %}
+{% endblock %}

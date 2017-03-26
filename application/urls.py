@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
+from core.views import groups
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^group/', include('group.urls', namespace="group")),
+    url(r'^groups/', groups)
 ]
